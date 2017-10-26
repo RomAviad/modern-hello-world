@@ -1,4 +1,4 @@
-# NEW-AGE Hello-World
+# Modern Hello-World
 This repository will hold my conception of how a "hello world" should look.
 
 For many years, our "introduction code" to new programming languages has been the `"Hello World!"` kind of program, in which you print a simple constant string to the screen.
