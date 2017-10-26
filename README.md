@@ -7,4 +7,4 @@ This so-called "introduction code" never helped anyone to get a hold of how codi
 With all respect to tradition, I figured the first time you touch a new programming language should be when you implement something you might encounter in the real world. And so it goes with my coneption:
 * Run an HTTP server
 * Serve `Hello World` from the root route (`http://<server_address>:<port>/`)
-* Serve a `POST` request that returns the N-grams of a given string (provided in JSON payload, along with N) 
+* Serve a `POST` request that returns the N-grams of a given string (provided in JSON payload, along with N). (route: `http://<server_address>:<port>/ngrams`)
