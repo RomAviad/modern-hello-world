@@ -4,8 +4,13 @@ import (
 	"io"
 	"net/http"
 	"strings"
-	//"fmt"
+	"encoding/json"
+	"strconv"
 )
+
+type Result struct {
+	Ngrams [][]string `json:"ngrams"`
+}
 
 func helloHandler(writer http.ResponseWriter, request *http.Request) {
 	io.WriteString(writer, "Hello World")
@@ -15,28 +20,23 @@ func helloHandler(writer http.ResponseWriter, request *http.Request) {
 func nGrams(writer http.ResponseWriter, request *http.Request) {
 	request.ParseForm()
 	data := request.Form.Get("data")
-	splitted := strings.Split(data, " ")
-	ngrams_str := "[["
-	for i := 0; i < len(splitted); i++ {
-		if i != len(splitted)-1 {
-			var tmp_arr = []string{ngrams_str, strings.Join([]string{"'", "'"}, splitted[i])}
-			ngrams_str = strings.Join(tmp_arr, "")
-			tmp_arr[0] = ngrams_str
-			tmp_arr[1] = strings.Join([]string{"'", "'"}, splitted[i+1])
-			ngrams_str = strings.Join(tmp_arr, ", ")
-			tmp_arr[0] = ngrams_str
-			tmp_arr[1] = "]"
-			ngrams_str = strings.Join(tmp_arr, "")
-			if i < len(splitted)-2 {
-				tmp_arr[0] = ngrams_str
-				tmp_arr[1] = ", ["
-				ngrams_str = strings.Join(tmp_arr, "")
-			}
-		}
+	N, atoi_err := strconv.Atoi(request.Form.Get("n"))
+	if N < 1 || atoi_err != nil {
+		http.Error(writer, atoi_err.Error(), http.StatusInternalServerError)
 	}
-	var tmp = []string{ngrams_str, "]"}
-	ngrams_str = strings.Join(tmp, "")
-	io.WriteString(writer, ngrams_str)
+	splitted := strings.Split(data, " ")
+	result := [][]string{}
+	for i := 0; i < len(splitted) - N + 1; i++ {
+		ngram := splitted[i:i+N]
+		result = append(result, ngram)
+	}
+	res := Result{result}
+	jsonified, err := json.Marshal(res)
+	if err != nil {
+		http.Error(writer, err.Error(), http.StatusInternalServerError)
+	}
+	writer.Header().Set("Content-Type", "application/json")
+	writer.Write(jsonified)
 }
 
 func main() {
