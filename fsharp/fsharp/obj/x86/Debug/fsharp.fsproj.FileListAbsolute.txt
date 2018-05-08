@@ -1,0 +1,16 @@
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/fsharp.exe
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/fsharp.pdb
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/FSharp.Core.dll
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Nancy.dll
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/System.ValueTuple.dll
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/System.ValueTuple.xml
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/FSharp.Core.xml
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Nancy.xml
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/obj/x86/Debug/fsharp.fsprojResolveAssemblyReference.cache
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/obj/x86/Debug/fsharp.fsproj.CoreCompileInputs.cache
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/obj/x86/Debug/fsharp.exe
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/obj/x86/Debug/fsharp.pdb
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Nancy.Hosting.Self.dll
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Nancy.Hosting.Self.xml
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Newtonsoft.Json.dll
+/Users/aviad.rom/Dev/hello-world-project/fsharp/fsharp/bin/Debug/Newtonsoft.Json.xml
