@@ -7,7 +7,7 @@ homepage = "https://github.com/RomAviad/modern-hello-world"
 repository = "https://github.com/RomAviad/modern-hello-world"
 
 [dependencies]
-rocket = "0.4.5"
+rocket = "0.4.7"
 rocket_contrib = "0.4.5"
 ngrams="1.0.1"
 serde={version="1.0.117", features=["derive"]}
